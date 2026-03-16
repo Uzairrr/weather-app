@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <p class="label">WEATHER DASHBOARD</p>
+      <h1>Weather App</h1>
+      <small>Live weather data via Open-Meteo — no API key required.</small>
+    </div>
+
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Search city..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="error" class="error" hidden></div>
+
+    <div id="empty" class="empty">
+      <div class="icon">🌍</div>
+      <p>Search for a city above</p>
+    </div>
+
+    <div id="results" hidden>
+      <div class="card">
+        <div class="current-top">
+          <div>
+            <p class="city" id="cityName"></p>
+            <div class="temp"><span id="tempVal"></span><span class="unit">°C</span></div>
+            <p class="condition" id="conditionVal"></p>
+          </div>
+          <div class="stats">
+            <div class="stat"><span class="stat-label">Feels like</span><span class="stat-value" id="feelsLike"></span></div>
+            <div class="stat"><span class="stat-label">Humidity</span><span class="stat-value" id="humidity"></span></div>
+            <div class="stat"><span class="stat-label">Wind</span><span class="stat-value" id="wind"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="card-label">7-DAY FORECAST</p>
+        <div id="forecast"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

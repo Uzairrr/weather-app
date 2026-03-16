@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e2e8f0;
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  margin-bottom: 28px;
+}
+.header .label {
+  color: #38bdf8;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  font-family: monospace;
+  margin-bottom: 8px;
+}
+.header h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+.header small {
+  color: #555;
+  font-size: 13px;
+  display: block;
+  margin-top: 6px;
+}
+
+/* Search */
+.search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.search input {
+  flex: 1;
+  background: #13131a;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #e2e8f0;
+  font-size: 14px;
+  outline: none;
+}
+.search input:focus {
+  border-color: #0ea5e9;
+}
+.search button {
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.search button:hover {
+  background: #0284c7;
+}
+.search button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* States */
+.error {
+  background: #1a0a0a;
+  border: 1px solid #7f1d1d;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #f87171;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.empty {
+  text-align: center;
+  padding: 60px 0;
+  color: #333;
+}
+.empty .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+.empty p {
+  font-size: 13px;
+}
+
+/* Cards */
+.card {
+  background: #13131a;
+  border: 1px solid #1e2030;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 14px;
+}
+.card-label {
+  color: #334155;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  font-family: monospace;
+  margin-bottom: 14px;
+}
+
+/* Current conditions */
+.current-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.city {
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.temp {
+  font-size: 56px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.temp .unit {
+  color: #475569;
+  font-size: 18px;
+  vertical-align: super;
+}
+.condition {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 150px;
+}
+.stat {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.stat-label {
+  color: #334155;
+  font-size: 12px;
+}
+.stat-value {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Forecast rows */
+.day-row {
+  display: grid;
+  grid-template-columns: 56px 24px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #13131a;
+}
+.day-row:last-child {
+  border-bottom: none;
+}
+.day-name {
+  color: #475569;
+  font-size: 12px;
+}
+.day-name.today {
+  color: #38bdf8;
+  font-weight: 600;
+}
+.day-icon {
+  font-size: 16px;
+}
+.day-cond {
+  color: #64748b;
+  font-size: 12px;
+}
+.day-temps {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+}
+.day-high {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+.day-low {
+  color: #334155;
+}
